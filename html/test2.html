@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>tripod</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="C://Users\Hp\Desktop\vs-code\apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="C://Users\Hp\Desktop\vs-code\apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="C://Users\Hp\Desktop\vs-code\apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="C://Users\Hp\Desktop\vs-code\apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="C://Users\Hp\Desktop\vs-code\apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="C://Users\Hp\Desktop\vs-code\apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="C://Users\Hp\Desktop\vs-code\apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="C://Users\Hp\Desktop\vs-code\apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="C://Users\Hp\Desktop\vs-code\apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="C://Users\Hp\Desktop\vs-code\android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="C://Users\Hp\Desktop\vs-code\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="C://Users\Hp\Desktop\vs-code\favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="C://Users\Hp\Desktop\vs-code\favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <style>
+        /* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+  background: #212121;
+  font-size:22px;
+  line-height: 32px;
+  color: #ffffff;
+  word-wrap:break-word !important;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+  
+
+
+a {
+  color: #FFF;
+}
+
+
+
+#container {
+  margin: 0 auto;
+}
+
+
+
+
+nav {
+  margin: 50px 0;
+  background-color:rgb(10, 177, 99)
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  }
+  
+nav ul li {
+  display:inline-block;
+  background-color:rgb(10, 177, 99)
+  }
+
+nav a {
+  display:block;
+  padding:0 27px;  
+  color:#FFF;
+  font-size:20px;
+  line-height: 60px;
+  text-decoration:none;
+}
+
+nav a:hover { 
+  background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+  display: none;
+  position: absolute; 
+  top: 60px; /* the height of the main nav */
+}
+  
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display:inherit;
+}
+  
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+  width:170px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+
+/* Second, Third and more Tiers  */
+nav ul ul ul li {
+  position: relative;
+  top:-60px; 
+  left:170px;
+}
+
+  
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' ↓'; }
+li > a:only-child:after { content: ''; }
+    </style>
+</head>
+<body>
+    <h1 align="center" style="color:rgb(10, 177, 99)"><strong>Tripod website</strong></h1>
+    
+<div id="container">
+    <nav>
+        <ul>
+            <li type="disc"><a href="test2.html">Home</a></li>
+            <li type=square><a href="#">gaming</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li ><a href="#"> headset</a></li>
+                <li ><a href="#"> mouse</a></li>
+                <li ><a href="#"> keyboard</a></li>
+            </ul>        
+            </li>
+            <li><a href="#">Gaming phone chipset</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="#">Snapdragon</a></li>
+                <li><a href="#">Apple A13</a>
+                <li><a href="#">Mediaek</a>
+                <li><a href="#">Exynos</a></li>
+              <!-- Second Tier Drop Down -->
+                </li>
+            </ul>
+            </li>
+            <li><a href="#">Ui/Ux Designing</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#"> About</a></li>
+        </ul>
+    </nav>
+  
+</div>
+</body>
+</html>
