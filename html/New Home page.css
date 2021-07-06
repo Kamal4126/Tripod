@@ -1,6 +1,40 @@
+/* used for the heading of different topics */
+h2{
+    text-align: center;
+    /* background-color: #371e48; */
+    font-size: 130%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 16px;
+    color: white;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    background: linear-gradient(140deg, #0dc3c5, #5f5b97 , #8a3c88 );
+}
+
+
+#grad1 {
+    height: 100px;
+    width:100%;
+    font-family:sans-serif;
+    background-color: #1fc8db; /* For browsers that do not support gradients */        
+    background-image: linear-gradient(140deg, #53c4cc80 0%, #BC70A4 50%, #b372da 75%);
+    color:white;
+    opacity:0.95;
+}
+
+
+
+
+
+
+
+
+
 body{
     margin:0;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
+    background-color: #eee6e6ee;
     font-family: 'Open Sans', sans-serif;
     font-size: 19px;
 } 
@@ -12,8 +46,12 @@ body{
 #navbar{
     overflow:hidden;
     font-size: 18px;
+    padding-top: 4px;
+    height: 50px;
+    letter-spacing: 2px;
     /* color: black; */
-    background-color: rgb(10, 177, 99);
+    /* background-color: rgb(10, 177, 99); */
+    background-color: #19181d;
 }
 #navbar a{
     float:left;
@@ -22,12 +60,12 @@ body{
     text-align:center;
     /* padding-top:10px; 
     padding-bottom:10px; */
-    padding: 10px 16px;
+    padding: 10px 30px;
     text-decoration: none;
 }
 
 #navbar a:hover, .search_bar:hover{
-    background-color:rgb(0, 0, 0) ;
+    background-color: rgb(0,0,0) ;
     color: aqua;
 }
 
@@ -39,33 +77,149 @@ body{
 .sticky + .content{
     padding-top: 36px;
 }
-img{
+.header_image{
+    /* margin-bottom: 0px;
+    padding-bottom: 0px; */
+    object-fit: scale-down;
+}
+img.header{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    /* width: 100%;
+    height: 100px; */
+} 
+img.logo{
     float: left;
     /* width: 120px; */
+    margin-left: 10px;
     height:31px;
     padding: 5px;
+    background-attachment: fixed;
 }
 
 #navbar .search_bar {
     float: right;
 }
+
+#navbar input[type=text]{
+    padding:4px;
+    margin: 6px;
+    margin-right: 0px;
+    font-size: 19px;
+    border: none;
+}
 .search_bar button{
     float: right;
-    padding: 4px 7px;
+    padding: 4px 6px;
     margin-top: 6px;
-
     margin-right: 25px;
-    font-size: 18px;
+    font-size: 19px;
     border: none;
     cursor: pointer;
 }
- #navbar input[type=text]{
-     padding:4px;
-     margin: 6px;
-     font-size: 17px;
-     border: none;
- }
 
-/* .search_bar:hover{
-    background: black;
-}  */
+
+
+div.product-box{
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 50px 0px 50px 50px;
+    padding: 40px;
+    letter-spacing: 1px;
+}
+
+div.product-box:hover {
+    background: linear-gradient(140deg, #0dc3c5, #5f5b97 , #8a3c88 );
+    color:aqua;
+}
+
+.product-description{
+    text-align: center;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* unused css not wanted to delete mehnat hai yar */
+.header_text{
+    font-size: 72px;
+    margin-left: 0 10%;
+    /* margin-right: 30%; */
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #0dc3c5, #5f5b97 , #8a3c88 );
+    -webkit-text-fill-color:transparent;
+    /* -webkit-background-clip: text; */
+    /* font-weight:550; */
+    /* padding-top:55px; */
+    /* text-shadow: 0px 0px; */
+    letter-spacing:2px;
+    word-spacing:3px;
+}
+
+    /* .search_bar:hover{
+        background: black;
+    }  */
+    
+
+    .col1 {
+        float :left;
+        margin: 70px 20px;
+        padding-left: 30px;
+        width: 25%;
+    }
+    .col2 {
+        padding-left: 103px;
+        margin: 70px 20px;
+        
+        width: 25%;
+    } 
+    /* .col2 {
+        display: block;
+        position:i;
+        margin-left: auto;
+        margin-right: auto;
+        
+        width:25%;
+    } */
+    .col3 {
+        float :right;
+        margin: 70px 20px;
+        padding-right: 30px;
+        width: 25%;
+    }
