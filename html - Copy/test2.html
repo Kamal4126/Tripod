@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tripod</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+
+
+    <style>
+        /* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+  background: #ebe3e3;
+  font-size:22px;
+  line-height: 32px;
+  color: #ffffff;
+  word-wrap:break-word !important;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+  
+
+
+a {
+  color: #FFF;
+}
+
+
+
+#container {
+  margin: 0 auto;
+}
+
+
+
+
+nav {
+  margin: 5px 0;
+  background-color:rgb(10, 177, 99)
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  }
+  
+nav ul li {
+  display:inline-block;
+  background-color:rgb(10, 177, 99)
+  }
+
+nav a {
+  display:block;
+  padding:0 25px;  
+  color:#FFF;
+  font-size:20px;
+  line-height: 45px;
+  text-decoration:none;
+}
+
+nav a:hover { 
+  background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+  display: none;
+  position: absolute; 
+  top: 45px; /* the height of the main nav */
+}
+  
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display:inherit;
+}
+  
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+  width:170px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+
+/* Second, Third and more Tiers  */
+nav ul ul ul li {
+  position: relative;
+  top:-60px; 
+  left:170px;
+}
+
+
+
+  
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' ↓'; }
+li > a:only-child:after { content: ''; }
+    </style>
+</head>
+<body>
+    <p><img src="neon.jpg" style="float:left;width:50px; margin-top: 0px;"</p>  
+    <pre  style="color:rgb(10, 177, 99); text-align:left; font-size: 30px ;"><strong> Tripod</strong></pre>
+    
+<div id="container">
+    <nav>
+        <ul>
+            <li type="disc"><a href="test2.html">Home</a></li>
+            <li type=square><a href="#">gaming</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li ><a href="#"> headset</a></li>
+                <li ><a href="#"> mouse</a></li>
+                <li ><a href="#"> keyboard</a></li>
+            </ul>        
+            </li>
+            <li><a href="#">Gaming phone chipset</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="#">Snapdragon</a></li>
+                <li><a href="#">Apple A13</a>
+                <li><a href="#">Mediaek</a>
+                <li><a href="#">Exynos</a></li>
+              <!-- Second Tier Drop Down -->
+                </li>
+            </ul>
+            </li>
+            <li><a href="#">Ui/Ux Designing</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#"> About</a></li>
+        </ul>
+    </nav>
+  
+</div>
+<div>
+  <nav>
+    <fieldset class="element_gral">
+                    <h1 class="h3">Latest Tutorials</h1>
+                    <div class="firsthomecontent">
+
+                        <a href="https://www.javatpoint.com/angular-material">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/angular-material.png" alt="angular material tutorial" src="https://static.javatpoint.com/images/homeicon/angular-material.png">
+                                <p>Angular Material</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/deep-learning">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/deep-learning.png" alt="deep learning tutorial" src="https://static.javatpoint.com/images/homeicon/deep-learning.png">
+                                <p>Deep Learning</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/bootstrap-4">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/bootstrap-4.png" alt="bootstrap 4 tutorial" src="https://static.javatpoint.com/images/homeicon/bootstrap-4.png">
+                                <p>Bootstrap 4</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/what-is-google-chrome">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/chrome.png" alt="Chrome" src="https://static.javatpoint.com/images/homeicon/chrome.png">
+                                <p>Chrome</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/dart-programming">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/dart.png" alt="Dart tutorial" src="https://static.javatpoint.com/images/homeicon/dart.png">
+                                <p>Dart</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.javatpoint.com/adobe-after-effect">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/after-effect.png" alt="after effects tutorial" src="https://static.javatpoint.com/images/homeicon/after-effect.png">
+                                <p>Adobe After Effects</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/adobe-dreamweaver">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/dreamweaver.png" alt="adobe dreamweaver tutorial" src="https://static.javatpoint.com/images/homeicon/dreamweaver.png">
+                                <p>Adobe Dreamweaver</p>
+                            </div>
+                        </a> 
+                        <a href="https://www.javatpoint.com/coreldraw">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/corel-draw.png" alt="Adobe CorelDraw tutorial" src="https://static.javatpoint.com/images/homeicon/corel-draw.png">
+                                <p>Adobe CorelDRAW</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/adobe-indesign">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/indesign.png" alt="Adobe Indesign tutorial" src="https://static.javatpoint.com/images/homeicon/indesign.png">
+                                <p>Adobe Indesign</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/audacity">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/audacity.png" alt="Audacity tutorial" src="https://static.javatpoint.com/images/homeicon/audacity.png">
+                                <p>Audacity</p>
+                            </div>
+                        </a>
+
+                        <a href="https://www.javatpoint.com/blue-prism">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/blueprism.png" alt="Blue Prism tutorial" src="https://static.javatpoint.com/images/homeicon/blueprism.png">
+                                <p>Blue Prism</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/python-cgi-programming">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/cgi.png" alt="Python CGI" src="https://static.javatpoint.com/images/homeicon/cgi.png">
+                                <p>Python CGI Programming</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/apache-cordova">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/cordova.png" alt="Cordova tutorial" src="https://static.javatpoint.com/images/homeicon/cordova.png">
+                                <p>Cordova</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/d3-js">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/d3-js.png" alt="D3.js tutorial" src="https://static.javatpoint.com/images/homeicon/d3-js.png">
+                                <p>d3.js</p>
+                            </div>
+                        </a>
+                        <a href="https://www.javatpoint.com/dialogflow">
+                            <div class="homecontent"><img class=" lazyloaded" data-src="https://static.javatpoint.com/images/homeicon/dialogflow.png" alt="DialogFlow tutorial" src="https://static.javatpoint.com/images/homeicon/dialogflow.png">
+                                <p>Dialogflow</p>
+                            </div>
+                        </a>
+
+                  </div>
+                </fieldset>
+  </nav>
+</div>
+</body>
+</html>
