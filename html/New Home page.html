@@ -1,26 +1,47 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+    header("location: login.php");
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Gaming with Tripod</title>
+        <title>Tripod | Ecommerce Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---FAV ICON INSERTED AT THE BEGGINNING OF TITLE-->
+        <link rel="shortcut icon" href="t-images\logo3.png">
         <link rel="stylesheet" href="New Home page.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/358428d5f5.js" crossorigin="anonymous"></script>
+        
     </head>
     
     <body>
         <!-- header -->
-        <div id="grad1" style="text-align:center;margin:auto;color:#f3f3f3;font-size:30px;font-weight:550;padding-top:55px;text-shadow: 4px 4px 4px black;letter-spacing:2px; word-spacing:3px;">For The Gamers by The Tripod</div>
+        <div id="grad1" >For The Gamers by The Tripod</div>
         
         
         
         <!-- navigation menu -->
-        <div id="navbar">
-            <img class="logo" src="Tripod logo.jpg" alt="tripod text logo">
+        <nav id="navbar">
+            <a href="New Home page.html">
+                <img class="logo" src="Tripod logo.jpg" alt="tripod text logo">
+            </a>
             
-            <a href="javascript:void(0)">Home</img>
-            <a href="javascript:void(0)">Laptop <i class="fa fa-caret-down"></i></a>
-            <a href="javascript:void(0)">Phones <i class="fa fa-caret-down"></i></a>
-            <a href="javascript:void(0)">Gaming accessories <i class="fa fa-caret-down"></i></a>
+            <a href="New Home page.html">Home</img>
+            <a href="#H1">Laptop</a>
+            <a href="#H2">Phones</a>
+            <a href="#H3">Consoles</a>
+            <a href="#H4">Gaming accessories <i class="fa fa-caret-down"></i></a>
+            <div class="user_icon">
+                <a href="javascript:void(0)"><i class="fas fa-user"></i></a>
+           </div>
             <div class="search_bar">
                 <!-- in action we requre a action.php page -->
                 <form action="#">
@@ -28,54 +49,225 @@
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-        </div>
-        <div style="margin-bottom: 0px; padding-bottom: 0px;">
-            <img style="width: 100%;height: 800px;" src="pexels-fox.jpg" alt="img -1">
-        </div>
+        </nav>
+
+
+
+
+
+        <!-- image on top -->
+        <!-- <div style="margin-bottom: 0px; padding-bottom: 0px;">
+            <img style="display:block; width: 100%; height: 800px;" src="t-images\pexels-fox.jpg" alt="img -1">
+        </div> -->
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">              
+              <img src="t-images\pexels-fox.jpg" style="width:100%; height:800px;">              
+            </div>            
+            <div class="mySlides fade">            
+              <img src="t-images\pexels-lucie.jpg" style="width:100%; height:800px;">              
+            </div>            
+            <div class="mySlides fade">            
+              <img src="t-images\pexels-Triton.jpg" style="width:100%; height:800px;">             
+            </div>            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>            
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>            
+            
+            
+
+
+
+
+
+
+
+        <!-- products -->
+
+
+
+
+        <h2 id="H1">Gaming Laptop</h2>
         
-        
-        
-        <h2>Gaming Laptop</h2>
-        <div>
-            <div class="product-box">
-                <img src="t-images\dell-g7.jpg" alt="lenovo-ideapad" style="width: 100%;">
-                <p class="product-description">Price:₹1,79,990<hr>DELL G7 Core i9 10th Gen</p>
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\dell-g7.jpg" alt="DEll G7" >
+                <p class="product-description">DELL G7 Core i9 10th Gen Intel/Geforce RTX 3090/32Gb RAM/ 2TB SSD<hr>Price:₹1,79,990</p>
             </div>
             <div class="product-box" >
-                <img src="t-images\alienware.jpg" alt="ALIENWARE" style="width: 100%;">
-                <p class="product-description">Price:₹3,19,990<hr>ALIENWARE Core i9 10th Gen</p>
+                <img class="imgofproduct" src="t-images\alienware.jpg" alt="ALIENWARE" >
+                <p class="product-description">ALIENWARE i9 10<sup>th</sup> Gen/Geforce RTX 3080/16 GB RAM/ 1TB SSD<br><hr><b>Price: </b>₹3,19,990</p>
             </div>
             <div class="product-box" >
-                <img src="t-images\alienware.jpg" alt="ALIENWARE" style="width: 100%;">
-                <p class="product-description">ALIENWARE Core i9 10th Gen</p>
+                <img class="imgofproduct" src="t-images\razer-blade 15.png" alt="Razer blade 15" >
+                <p class="product-description">Razer Blade 15 i9 11<sup>th</sup> Gen Intel/ Geforce RTX 3070/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹1,25,000</p>
             </div>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\Asus tuf.jpg" alt="Asus tuf A17" >
+                <p class="product-description">ASUS TUF Gaming A17 Ryzen 7/ Geforce 1660Ti/ 16GB RAM/ 1TB HDD/ 256GB SSD<hr>Price:₹92,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\asus-rog-zephyrus1.jpg" alt="Asus zephyrus" >
+                <p class="product-description">ASUS ROG Zephyrus M15 i7 10<sup>th</sup> Gen Intel/ GeForce GTX 1660 Ti/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹99,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\predator1.jpg" alt="ALIENWARE" >
+                <p class="product-description">Acer Predator Triton 300 i7 10<sup>10th</sup>Gen Intel/ GeForce RTX 2070 with Max-Q Design/16GB RAM/2TB SSD<hr><b>Price: </b>₹1,59,990</p>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\msi-gs75.jpg" alt="msi-gs75" >
+                <p class="product-description">MSI GL75 Stealth i9 10<sup>th</sup> Gen Intel/GeForce RTX 2070 Super Max-Q/300 Hz/ 32GB RAM/1TB SSD<hr><b>Price: </b>₹₹2,44,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\lenovo-ideapad -3.jpg" alt="lenovo-ideapad" >
+                <p class="product-description">Lenovo Ideapad Gaming 3 Ryzen 7/GeForce GTX 1660ti/ 8GB RAM/512GB SSD<hr><b>Price: </b>₹98,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\Hp-omen 15.png" alt="Hp-omen 15" >
+                <p class="product-description">HP Omen Core i7 10th Gen/ GeForce GTX 1660/16GB RAM/ 512GB SSD/ Ghost lighing<hr><b>Price: </b>₹1,35,000</p>
+            </div>
+        </div>
            
+        
+        
+        
+
+        <h2 id="H2">Gaming Phones</h2>
+
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\dell-g7.jpg" alt="DEll G7" >
+                <p class="product-description">DELL G7 Core i9 10th Gen Intel/Geforce RTX 3090/32Gb RAM/ 2TB SSD<hr>Price:₹1,79,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\alienware.jpg" alt="ALIENWARE" >
+                <p class="product-description">ALIENWARE i9 10<sup>th</sup> Gen/Geforce RTX 3080/16 GB RAM/ 1TB SSD<br><hr><b>Price: </b>₹3,19,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\razer-blade 15.png" alt="Razer blade 15" >
+                <p class="product-description">Razer Blade 15 i9 11<sup>th</sup> Gen Intel/ Geforce RTX 3070/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹1,25,000</p>
+            </div>
         </div>
-        
-        
-        
-        
-        
-        <h2>Gaming Phones</h2>
-        <div>
-            <img class="col1" src="neon.jpg" alt="lenovo-ideapad">
-            <img class="col2" src="neon.jpg" alt="lenovo-ideapad">
-            <img class="col3" src="neon.jpg" alt="lenovo-ideapad">
-        </div>
-        <h2>Gaming Keyboard and Mouse</h2>
-        <div>
-            <img class="col1" src="neon.jpg" alt="lenovo-ideapad">
-            <img class="col2" src="neon.jpg" alt="lenovo-ideapad">
-            <img class="col3" src="neon.jpg" alt="lenovo-ideapad">
-        </div>
-        <h2>Consoles</h2>
-        <div>
-            <img class="col1" src="neon.jpg" alt="lenovo-ideapad">
-            <img class="col2" src="neon.jpg" alt="lenovo-ideapad">
-            <img class="col3" src="neon.jpg" alt="lenovo-ideapad">
+        <div style="display:flex; flex-direction: row;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\Asus tuf.jpg" alt="Asus tuf A17" >
+                <p class="product-description">ASUS TUF Gaming A17 Ryzen 7/ Geforce 1660Ti/ 16GB RAM/ 1TB HDD/ 256GB SSD<hr>Price:₹92,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\asus-rog-zephyrus.jpg" alt="Asus zephyrus" >
+                <p class="product-description">ASUS ROG Zephyrus M15 i7 10<sup>th</sup> Gen Intel/ GeForce GTX 1660 Ti/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹99,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\predator.jpg" alt="ALIENWARE" >
+                <p class="product-description">Acer Predator Triton 300 i7 10<sup>10th</sup>Gen Intel/ GeForce RTX 2070 with Max-Q Design/16GB RAM/2TB SSD<hr><b>Price: </b>₹1,59,990</p>
+            </div>
         </div>
 
+
+        
+        
+        <h2 id="H3">Consoles</h2>
+
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\dell-g7.jpg" alt="DEll G7" >
+                <p class="product-description">DELL G7 Core i9 10th Gen Intel/Geforce RTX 3090/32Gb RAM/ 2TB SSD<hr>Price:₹1,79,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\alienware.jpg" alt="ALIENWARE" >
+                <p class="product-description">ALIENWARE i9 10<sup>th</sup> Gen/Geforce RTX 3080/16 GB RAM/ 1TB SSD<br><hr><b>Price: </b>₹3,19,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\razer-blade 15.png" alt="Razer blade 15" >
+                <p class="product-description">Razer Blade 15 i9 11<sup>th</sup> Gen Intel/ Geforce RTX 3070/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹1,25,000</p>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction: row;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\Asus tuf.jpg" alt="Asus tuf A17" >
+                <p class="product-description">ASUS TUF Gaming A17 Ryzen 7/ Geforce 1660Ti/ 16GB RAM/ 1TB HDD/ 256GB SSD<hr>Price:₹92,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\asus-rog-zephyrus.jpg" alt="Asus zephyrus" >
+                <p class="product-description">ASUS ROG Zephyrus M15 i7 10<sup>th</sup> Gen Intel/ GeForce GTX 1660 Ti/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹99,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\predator.jpg" alt="ALIENWARE" >
+                <p class="product-description">Acer Predator Triton 300 i7 10<sup>10th</sup>Gen Intel/ GeForce RTX 2070 with Max-Q Design/16GB RAM/2TB SSD<hr><b>Price: </b>₹1,59,990</p>
+            </div>
+        </div>
+
+
+
+        
+        <h2 id="H4">Gaming Keyboard and Mouse</h2>
+        
+        <div style="display:flex; flex-direction: row; margin-top: 75px;">
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\dell-g7.jpg" alt="DEll G7" >
+                <p class="product-description">DELL G7 Core i9 10th Gen Intel/Geforce RTX 3090/32Gb RAM/ 2TB SSD<hr>Price:₹1,79,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\alienware.jpg" alt="ALIENWARE" >
+                <p class="product-description">ALIENWARE i9 10<sup>th</sup> Gen/Geforce RTX 3080/16 GB RAM/ 1TB SSD<br><hr><b>Price: </b>₹3,19,990</p>
+            </div>
+            <div class="product-box" >
+                <img class="imgofproduct" src="t-images\razer-blade 15.png" alt="Razer blade 15" >
+                <p class="product-description">Razer Blade 15 i9 11<sup>th</sup> Gen Intel/ Geforce RTX 3070/ 16GB RAM/ 1TB SSD<hr><b>Price: </b>₹1,25,000</p>
+            </div>
+        </div>
+
+        
+        
+
     
+
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col1">
+                        <h3>About Us</h3>
+                        <!-- <img src="t-images\appstore and playstore.png" width="225px" height="125px"> -->
+                        <p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the better you get. We the Tripodians sell premium class gaming products for Gamers</p>
+                    </div>
+                    <div class="footer-col2">
+                        <img src="t-images\Triopd Brand.jpg">
+                    </div>
+                    <div class="footer-col3">
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="#H1">Gaming Laptop</a></li>
+                            <li><a href="#H2">Gaming Phones</a></li>
+                            <li><a href="#H3">Consoles</a></li>
+                            <li><a href="#H4">Other Gaming Accessories</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="footer-col4">
+                        <h3>Follow us on</h3>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-github"></i> Github</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2021 - Tripod</p>
+            </div>
+        </div>
 
 
         <script>
@@ -90,6 +282,56 @@
                     navbar.classList.remove("sticky");                
                 }
             }
+
+
+
+            // slideshow- carousel
+            
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }            
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+            
+
+            // var slideIndex = 0;
+            // showSlides();
+            
+            // function showSlides() {
+            //   var i;
+            //   var slides = document.getElementsByClassName("mySlides");
+            //   for (i = 0; i < slides.length; i++) {
+            //     slides[i].style.display = "none";
+            //   }
+            //   slideIndex++;
+            //   if (slideIndex > slides.length) {slideIndex = 1}
+            //   slides[slideIndex-1].style.display = "block";
+            //   setTimeout(showSlides, 7000); // Change image every 7 seconds
+            // }
+            
+            
+            
         </script>
-        </body>
-        </html>
+    </body>
+</html>
